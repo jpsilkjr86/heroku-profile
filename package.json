@@ -1,5 +1,5 @@
 {
-  "name": "profile",
+  "name": "portfolio-react",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,12 +9,35 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpsilkjr86/heroku-profile.git"
+    "url": "git+https://github.com/jpsilkjr86/portfolio-react.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jpsilkjr86/heroku-profile/issues"
+    "url": "https://github.com/jpsilkjr86/portfolio-react/issues"
   },
-  "homepage": "https://github.com/jpsilkjr86/heroku-profile#readme"
+  "homepage": "https://github.com/jpsilkjr86/portfolio-react#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.1",
+    "morgan": "^1.9.0",
+    "react": "^15.6.1",
+    "react-alert": "^2.3.0",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.7.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.19.1"
+  }
 }
