@@ -44,7 +44,7 @@ app.use(express.static('public'));
 
 // ============ Webpack Middleware Configurations (Development Only) ============
 // first checks to make sure NODE_ENV is in development mode (ie not production mode)
-if (process.env.NODE_ENV == 'production') {
+if (process.env.NODE_ENV !== 'production') {
   console.log('NODE_ENV is in development mode.'
   	+ '\nConfiguring webpack-dev-middleware and webpack-hot-middleware...');
 

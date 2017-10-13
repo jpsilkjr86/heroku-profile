@@ -10,7 +10,6 @@ class Portfolio extends Component {
 		// set initial state
     this.state = {
 			foo: 'bar'
-		  },
 		};
 	}
 
