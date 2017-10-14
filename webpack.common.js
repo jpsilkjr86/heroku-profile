@@ -11,6 +11,10 @@ module.exports = {
     publicPath: '/',
     filename: "bundle.js"
   },
+  // allows for multiple extensions in imports
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   // transformations
   module: {
     loaders: [
