@@ -18,6 +18,7 @@ module.exports = {
   // transformations
   module: {
     loaders: [
+      // for .js / .jsx
       {
         // limited to .js or .jsx extensions
         test: /\.jsx?$/,
@@ -29,7 +30,36 @@ module.exports = {
         query: {
           // transformations
           presets: ["react", "env"],
-          plugins: [require('babel-plugin-transform-object-rest-spread')]
+          plugins: [
+            // allows for {...rest} in destructuring props, etc
+            require('babel-plugin-transform-object-rest-spread'),
+            // allows for property initializers in class definitions
+            require('babel-plugin-transform-class-properties')
+          ]
+        }
+      },
+      // for .css to enable css-modules (locally scoped css!)
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader"
+          }, 
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]--[hash:base64:5]'
+            }
+          }
+        ]
+      },
+      // for image-type assets
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
         }
       }
     ]
