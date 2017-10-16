@@ -28,13 +28,12 @@ class Portfolio extends Component {
 	render() {
 		const { handleChangeTheme, themes } = this.props;
 
-		return (
-	    <div>
-				<Header handleChangeTheme={handleChangeTheme} themes={themes}/>
-				<Main foo={this.state.foo} />
-				<Footer />
-	    </div>
-		);
+		// now we can render an array of elements in React 16! need keys to avoid warnings though
+		return [
+			<Header key="header" handleChangeTheme={handleChangeTheme} themes={themes}/>,
+			<Main key="main" foo={this.state.foo} />,
+			<Footer key="footer" />
+		];
 	}
 }
 
