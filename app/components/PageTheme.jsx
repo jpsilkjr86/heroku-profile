@@ -18,27 +18,24 @@ const themes = [{
 	style: styles.metro
 }];
 
-// generate themeNames by reducing the names out of themes array
-const themeNames = themes.reduce((prev, current) => {
-	prev.push(current.name);
-	return prev;
-}, []);
-
+// generate themeNames by reducing the names out of themes array. [] is initialValue
+const themeNames = themes.reduce((prev, current) => [...prev, current.name], []);
 
 // PageTheme takes care of all CSS theme content and logic
 class PageTheme extends Component {
   // declares initial state without constructor
 	state = {
-		currentTheme: 0
+		currentIndex: 0
 	}
 
 	handleChangeTheme = selected => {
-		selected !== this.state.currentTheme && this.setState({currentTheme: selected});
+		selected !== this.state.currentIndex && this.setState({currentIndex: selected});
 	}
 
 	render() {
+		const { currentIndex } = this.state;
 		return (
-			<div className={styles.page + " " + themes[this.state.currentTheme].style}>
+			<div className={styles.page + " " + themes[currentIndex].style}>
 	    	<Portfolio
 	    		handleChangeTheme={this.handleChangeTheme}
 	    		themes={themeNames}
