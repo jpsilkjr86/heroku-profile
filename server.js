@@ -87,8 +87,8 @@ db.once('open', function() {
   //   require('./controllers/auth-routes.js')(app, passport);
 		// require('./controllers/api-routes.js')(app);
     // default html route is to redirect the index page
-    // app.get('*', (req, res) => {
-    //   res.redirect('/');
-    // });
+    app.get('*', (req, res) => {
+      res.redirect('/');
+    });
 	});
 });
