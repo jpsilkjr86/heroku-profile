@@ -6,25 +6,32 @@ import { string } from 'prop-types';
 
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
+
+const NavItemLink = ({to, children}) => (
+  <li role="presentation">
+    <Link to={to} role="button">{children}</Link>
+  </li>
+);
+
 const Header = ({handleChangeTheme, themes}) => (
   <Navbar inverse collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#">React-Bootstrap</a>
+        <Link to="/">John's Portfolio (React!)</Link>
       </Navbar.Brand>
-      <Navbar.Toggle />
+      <Navbar.Toggle/>
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
-        <NavItem eventKey={1} href="#">Link</NavItem>
-        <NavItem eventKey={2} href="#">Link</NavItem>
+        <NavItemLink to="/resume">Resume</NavItemLink>
+        <NavItemLink to="/works">Works</NavItemLink>
       </Nav>
       <Nav pullRight>
         <NavDropdown eventKey={3} title="Choose a Theme!" id="basic-nav-dropdown">
           {themes.map((theme, i) =>
             <MenuItem
               key={theme}
-              eventKey={3 + (i+1)/10}
+              eventKey={1 + (i+1)/10}
               onClick={() => handleChangeTheme(i)}
             >
               {theme}
