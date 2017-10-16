@@ -1,9 +1,17 @@
-.kaohsiung {
-	background-image: url("./bkg/kaohsiung.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.page {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.kaohsiung {
+	background-image: url("./bkg/kaohsiung.jpg");
+}
+.taipei {
+	background-image: url("./bkg/taipei.jpg");
+}
+.metro {
+	background-image: url("./bkg/metro.jpg");
 }

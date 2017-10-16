@@ -2,16 +2,14 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 
-import { string } from 'prop-types';
+import { array, func } from 'prop-types';
 
 // children components
 import Header from './Portfolio/Header';
 import Main from './Portfolio/Main';
 import Footer from './Portfolio/Footer';
 
-import styles from './Portfolio.css';
-
-// declares Portfolio component as ES6 class, which will be this file's export
+// Portfolio is the parent component to the rest of the app and the primary state-holder
 class Portfolio extends Component {
   // declares initial state without constructor
 	state = {
@@ -20,33 +18,24 @@ class Portfolio extends Component {
 
 	// defaultProps and propTypes at top of component for easy reference
 	static defaultProps = {
-    fizz: 'fazz',
-    hey: 'hi'
+    themes: []
   }
   static propTypes = {
-    fizz: string.isRequired,
-    hey: string
+    themes: array.isRequired,
+    handleChangeTheme: func.isRequired
   }
-	// uses arrow function for defining handlers to avoid need for binding *this*
-	handleClick = e => {
-		console.log(this);
-		console.log(e.target);
-	}
 
 	render() {
-		console.log(this.props);
+		const { handleChangeTheme, themes } = this.props;
+
 		return (
-	    <div className={styles.kaohsiung}>
-				<Header/>
-				<Main
-					foo={this.state.foo}
-					handleClick={this.handleClick}
-				/>
+	    <div>
+				<Header handleChangeTheme={handleChangeTheme} themes={themes}/>
+				<Main foo={this.state.foo} />
 				<Footer />
 	    </div>
 		);
 	}
 }
 
-// exports Portfolio component for other files to use
 export default Portfolio;
