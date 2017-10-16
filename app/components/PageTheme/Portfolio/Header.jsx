@@ -6,10 +6,15 @@ import { string } from 'prop-types';
 
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
+const resumeLink = 'https://docs.google.com/document/d/1bn5rhGN1l2Hli8Ix3WOvoFqV3xSklmLDtQoadtWE26g/edit?usp=sharing';
 
-const NavItemLink = ({to, children}) => (
+const NavItemLink = ({to, children, externalTarget}) => (
   <li role="presentation">
-    <Link to={to} role="button">{children}</Link>
+    {externalTarget ? (
+      <a target="_blank" href={externalTarget}>{children}</a>
+    ) : (
+      <Link to={to} role="button">{children}</Link>
+    )}
   </li>
 );
 
@@ -22,12 +27,11 @@ const Header = ({handleChangeTheme, themes}) => (
       <Navbar.Toggle/>
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav>
-        <NavItemLink to="/resume">Resume</NavItemLink>
-        <NavItemLink to="/works">Works</NavItemLink>
-      </Nav>
       <Nav pullRight>
-        <NavDropdown eventKey={3} title="Choose a Theme!" id="basic-nav-dropdown">
+        <NavItemLink externalTarget={resumeLink}>Resume</NavItemLink>
+        <NavItemLink to="/works">Works</NavItemLink>
+        <NavItemLink to="/games">Games</NavItemLink>
+        <NavDropdown eventKey={1} title="Choose a Theme!" id="theme-dropdown">
           {themes.map((theme, i) =>
             <MenuItem
               key={theme}
