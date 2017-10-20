@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 
-import { array, func } from 'prop-types';
+import { array, func, object } from 'prop-types';
 
 // children components
 import Header from './Portfolio/Header';
@@ -22,12 +22,13 @@ class Portfolio extends Component {
   }
   static propTypes = {
     themes: array.isRequired,
+    theme: object.isRequired,
     handleChangeTheme: func.isRequired
   }
 
-  // only updates if the state has changed
+  // returns true except when props.theme changes
   shouldComponentUpdate(nextProps, nextState) {
-  	return this.state !== nextState;
+  	return this.props.theme === nextProps.theme;
   }
 
 	render() {

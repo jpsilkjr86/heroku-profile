@@ -45,13 +45,14 @@ class PageTheme extends Component {
 	}
 
 	render() {
-		console.log(this.state);
+		console.log('PageTheme renders');
 		const { currentTheme } = this.state;
 		return (
 			<div className={page + " " + currentTheme.bkg}>
 	    	<Portfolio
 	    		handleChangeTheme={this.handleChangeTheme}
 	    		themes={themeNames}
+	    		theme={currentTheme}
 	    	/>
 	    </div>
 		);
