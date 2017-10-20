@@ -4,18 +4,18 @@ import React, { Component } from 'react';
 // child component
 import Portfolio from './PageTheme/Portfolio';
 
-import styles from './PageTheme.css';
+import { page } from './styles/page.css';
 
 // generate themes array using styles css data and inserting UI names
 const themes = [{
 	name: 'Kaohsiung',
-	style: styles.kaohsiung
+	fileName: 'kaohsiung.css'
 },{
 	name: 'Taipei',
-	style: styles.taipei
+	fileName: 'taipei.css'
 },{
 	name: 'Metro',
-	style: styles.metro
+	fileName: 'metro.css'
 }];
 
 // generate themeNames by reducing the names out of themes array. [] is initialValue
@@ -25,17 +25,30 @@ const themeNames = themes.reduce((prev, current) => [...prev, current.name], [])
 class PageTheme extends Component {
   // declares initial state without constructor
 	state = {
-		currentIndex: 0
+		// index refers to index of themes array above
+		currentIndex: 0,
+		// default imported theme is index 0
+		currentTheme: require(`./styles/${themes[0].fileName}`)
 	}
 
-	handleChangeTheme = selected => {
-		selected !== this.state.currentIndex && this.setState({currentIndex: selected});
+	handleChangeTheme = selectedIndex => {
+		// only updates theme state if selectedIndex is different from currentIndex.
+		// in React v16, if setState returns null then it will not trigger an update.
+		// (https://github.com/facebook/react/releases)
+		this.setState(prevState => (
+			selectedIndex !== prevState.currentIndex && {
+				currentIndex: selectedIndex,
+				// imports selected css theme according to selectedIndex
+				currentTheme: require(`./styles/${themes[selectedIndex].fileName}`)
+			})
+		);
 	}
 
 	render() {
-		const { currentIndex } = this.state;
+		console.log(this.state);
+		const { currentTheme } = this.state;
 		return (
-			<div className={styles.page + " " + themes[currentIndex].style}>
+			<div className={page + " " + currentTheme.bkg}>
 	    	<Portfolio
 	    		handleChangeTheme={this.handleChangeTheme}
 	    		themes={themeNames}
