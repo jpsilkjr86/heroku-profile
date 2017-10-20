@@ -25,14 +25,19 @@ class Portfolio extends Component {
     handleChangeTheme: func.isRequired
   }
 
+  // only updates if the state has changed
+  shouldComponentUpdate(nextProps, nextState) {
+  	return this.state !== nextState;
+  }
+
 	render() {
 		const { handleChangeTheme, themes } = this.props;
-
+		console.log('Portfolio renders');
 		// now we can render an array of elements in React 16! need keys to avoid warnings though
 		return [
 			<Header key="header" handleChangeTheme={handleChangeTheme} themes={themes}/>,
-			<Main key="main" foo={this.state.foo} />,
-			<Footer key="footer" />
+			<Main key="main"/>,
+			<Footer key="footer"/>
 		];
 	}
 }
