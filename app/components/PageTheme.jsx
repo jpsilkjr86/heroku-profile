@@ -6,7 +6,7 @@ import Portfolio from './PageTheme/Portfolio';
 
 import { page } from './styles/page.css';
 
-// generate themes array using styles css data and inserting UI names
+// saves themes array as single source of truth about css for this component
 const themes = [{
 	name: 'Kaohsiung',
 	fileName: 'kaohsiung.css'
@@ -18,7 +18,7 @@ const themes = [{
 	fileName: 'metro.css'
 }];
 
-// generate themeNames by reducing the names out of themes array. [] is initialValue
+// generates themeNames by reducing the names out of themes array. [] is initialValue
 const themeNames = themes.reduce((prev, current) => [...prev, current.name], []);
 
 // PageTheme takes care of all CSS theme content and logic

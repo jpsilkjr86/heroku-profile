@@ -13,7 +13,7 @@ import Footer from './Portfolio/Footer';
 class Portfolio extends Component {
   // declares initial state without constructor
 	state = {
-		foo: 'bar'
+		language: 'English'
 	}
 
 	// defaultProps and propTypes at top of component for easy reference
