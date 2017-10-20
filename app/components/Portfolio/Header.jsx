@@ -5,16 +5,13 @@ import { Link } from 'react-router-dom';
 import { string } from 'prop-types';
 
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap'; // for NavLinks to display and work properly
 
 const resumeLink = 'https://docs.google.com/document/d/1bn5rhGN1l2Hli8Ix3WOvoFqV3xSklmLDtQoadtWE26g/edit?usp=sharing';
 
-const NavItemLink = ({to, children, externalTarget}) => (
+const ExternalLink = ({children, href}) => (
   <li role="presentation">
-    {externalTarget ? (
-      <a target="_blank" href={externalTarget}>{children}</a>
-    ) : (
-      <Link to={to} role="button">{children}</Link>
-    )}
+    <a target="_blank" href={href}>{children}</a>
   </li>
 );
 
@@ -28,14 +25,14 @@ const Header = ({handleChangeTheme, themes}) => (
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullRight>
-        <NavItemLink externalTarget={resumeLink}>Resume</NavItemLink>
-        <NavItemLink to="/works">Works</NavItemLink>
-        <NavItemLink to="/games">Games</NavItemLink>
-        <NavDropdown eventKey={1} title="Choose a Theme!" id="theme-dropdown">
+        <ExternalLink href={resumeLink}>Resume</ExternalLink>
+        <LinkContainer to="/about"><NavItem eventKey={1}>About Me</NavItem></LinkContainer>
+        <LinkContainer to="/games"><NavItem eventKey={2}>Games</NavItem></LinkContainer>
+        <NavDropdown eventKey={3} title="Choose a Theme!" id="theme-dropdown">
           {themes.map((theme, i) =>
             <MenuItem
               key={theme}
-              eventKey={1 + (i+1)/10}
+              eventKey={3 + (i+1)/10}
               onClick={() => handleChangeTheme(i)}
             >
               {theme}
@@ -48,10 +45,11 @@ const Header = ({handleChangeTheme, themes}) => (
 );
 
 Header.propTypes = {
-  fizz: string.isRequired
+  handleChangeTheme: func.isRequired,
+  themes: array.isRequired
 };
 Header.defaultProps = {
-  fizz: 'fazz'
+  theme: []
 };
 
 
