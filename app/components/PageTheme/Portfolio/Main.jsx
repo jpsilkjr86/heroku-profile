@@ -6,28 +6,14 @@ import { Grid, Row, Col, Panel, Button } from 'react-bootstrap';
 
 import Media from 'react-media';
 
-import ProjectListGroup from './Main/ProjectListGroup';
-
+import ProjectNav from './Main/ProjectNav';
 
 const Main = props => (
-  <Grid>
-  	<Row>
-  		<Col xs={12} sm={6}>
-  			<ProjectListGroup/>
-  		</Col>
-      <Media query="(min-width: 769px)">
-      { mobileScreen => mobileScreen &&
-        <Col xs={12} sm={6}>
-          <Panel>
-            <h1>Hello!</h1>
-            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <p><Button bsStyle="primary">Learn more</Button></p>
-          </Panel>
-        </Col>
-      }
-      </Media>
-    </Row>
-  </Grid>
+  <main>
+    <Grid>
+    	<Route path="/" component={ProjectNav}/>
+    </Grid>
+  </main>
 );
 
 export default Main;
