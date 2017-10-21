@@ -9,3 +9,27 @@
 :global(.panel) {
 	background-color: #ccc;
 }
+:global(.panel-default>.panel-heading) {
+	background-color: #bbb;
+	border-color: #aaa;
+}
+:global(.list-group-item) {
+	background-color: #bbb;
+	border: 1px solid #aaa;
+	font-size: 1.26em;
+	padding: 10px 0;
+}
+:global(.list-group-item:focus) {
+	background-color: #31738f !important;
+	border-color: #31738f !important;
+	color: #fff !important;
+}
+:global(.list-group-item:hover) {
+	background-color: #31738f !important;
+	border-color: #31738f !important;
+	color: #fff !important;
+}
+:global(.list-group-item.active) {
+	background-color: #31738f;
+	border-color: #31738f;
+}
