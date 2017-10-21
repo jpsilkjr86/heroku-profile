@@ -5,9 +5,9 @@ import { Panel, Button } from 'react-bootstrap';
 
 
 const Games = props => (
-  <Panel>
-    Games
-  </Panel>
+	<Panel>
+	  Games
+	</Panel>
 );
 
 export default Games;
