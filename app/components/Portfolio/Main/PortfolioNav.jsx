@@ -1,10 +1,10 @@
 // imports react component classes
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
 import { Panel, Button, Accordion, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-// import { ListGroup, ListGroupItem } from 'reactstrap';
+import { Collapse } from 'reactstrap';
 
 const PortfolioNav = props => (
 	<div className="text-center">
@@ -20,6 +20,40 @@ const PortfolioNav = props => (
 );
 
 export default PortfolioNav;
+
+/*
+class PortfolioNav extends Component {
+  state = { collapse: false }
+
+  toggle = () => {
+  	console.log('before', this.state);
+    this.setState(prevState => ({ collapse: !prevState.collapse }));
+  }
+
+  render() {
+    return (
+      <div className="text-center">
+				<ListGroup>
+			   	<ListGroupItem onClick={this.toggle}>Featured Works</ListGroupItem>
+			    <Collapse isOpen={this.state.collapse}>
+			    	<ListGroupItem>1</ListGroupItem>
+			    	<ListGroupItem>2</ListGroupItem>
+			    	<ListGroupItem>3</ListGroupItem>
+			    </Collapse>
+			    <LinkContainer to="/about"><ListGroupItem>About Me</ListGroupItem></LinkContainer>
+			    <LinkContainer to="/myworks"><ListGroupItem>My Works</ListGroupItem></LinkContainer>
+			    <LinkContainer to="/collaborations"><ListGroupItem>Collaborations</ListGroupItem></LinkContainer>
+			    <LinkContainer to="/games"><ListGroupItem>Games</ListGroupItem></LinkContainer>
+			    <LinkContainer to="/links"><ListGroupItem>External Links</ListGroupItem></LinkContainer>
+			  </ListGroup>
+		  </div>
+    );
+  }
+}
+
+export default PortfolioNav;
+
+*/
 
 /*
   <ListGroup>
