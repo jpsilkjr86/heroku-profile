@@ -6,18 +6,42 @@ import { Panel, Button, Accordion, ListGroup, ListGroupItem } from 'react-bootst
 import { LinkContainer } from 'react-router-bootstrap';
 import { Collapse } from 'reactstrap';
 
-const PortfolioNav = ({ routes }) => (
-	<div className="text-center">
-		<ListGroup>
-			{/* create a set of links by iterating through props.routes */}
-			{ routes.map(({path, title}) => (
-      	<LinkContainer to={path} key={path}>
-      		<ListGroupItem>{title}</ListGroupItem>
-      	</LinkContainer>
-      ))}
-	  </ListGroup>
-  </div>
-);
+class PortfolioNav extends Component {
+  state = { isOpen: false }
+
+  toggle = () => {
+  	console.log('before', this.state);
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+  }
+
+  componentDidMount() {
+  	this.setState({isOpen: true});
+  }
+
+  componentWillUnmount() {
+  	this.setState({isOpen: false});
+  }
+
+  render() {
+
+  	const { routes } = this.props;
+
+    return (
+    	<Collapse isOpen={this.state.isOpen}>
+				<div className="text-center">
+					<ListGroup>
+						{/* create a set of links by iterating through props.routes */}
+						{ routes.map(({path, title}) => (
+			      	<LinkContainer to={path} key={path}>
+			      		<ListGroupItem>{title}</ListGroupItem>
+			      	</LinkContainer>
+			      ))}
+				  </ListGroup>
+			  </div>
+		  </Collapse>
+		);
+  }
+}
 
 export default PortfolioNav;
 
