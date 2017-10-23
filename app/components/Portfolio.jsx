@@ -5,11 +5,11 @@ import React, { Component } from 'react';
 import Header from './Portfolio/Header';
 import Main from './Portfolio/Main';
 import Footer from './Portfolio/Footer';
-import AboutMe from './Portfolio/PortfolioItems/AboutMe';
+
+import routes from './Portfolio/PortfolioItems/routes';
 
 import { page } from './styles/page.css';
 
-import { Panel } from 'react-bootstrap';
 
 // saves themes array as single source of truth about css for this component
 const themes = [
@@ -20,22 +20,6 @@ const themes = [
 
 // themeNames is an array of .name values from themes. [] is initialValue of reduce.
 const themeNames = themes.reduce((prev, current) => [...prev, current.name], []);
-
-const Featured = props => <Panel>Featured</Panel>;
-const MyWorks = props => <Panel>MyWorks</Panel>;
-const Collaborations = props => <Panel>Collaborations</Panel>;
-const Games = props => <Panel>Games</Panel>;
-const ExternalLinks = props => <Panel>ExternalLinks</Panel>;
-
-// saves routes array
-const routes = [
-	{ path: '/featured', component: Featured, title: 'Featured Works' },
-	{ path: '/about', component: AboutMe, title: 'About Me' },
-	{ path: '/myworks', component: MyWorks, title: 'My Works' },
-	{ path: '/collaborations', component: Collaborations, title: 'Collaborations' },
-	{ path: '/games', component: Games, title: 'Games' },
-	{ path: '/links', component: ExternalLinks, title: 'External Links' }
-];
 
 // declares PageTheme wrapper
 const PageTheme = ({theme, children}) => (
