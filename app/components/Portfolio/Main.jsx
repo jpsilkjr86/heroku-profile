@@ -12,29 +12,25 @@ const GridRow = ({children}) => <main><Grid><Row>{children}</Row></Grid></main>;
 
 const Main = ({ routes }) => (
 	<GridRow>
-    <Media query="(min-width: 769px)">
-      { smallSizeAndUp => smallSizeAndUp
-      	// always display PortfolioNav as side-nav on smallSizeAndUp screens
-        ? <div>
-        		<Route path="/" render={()=> <Col sm={4}><PortfolioNav routes={routes}/></Col>}/>
-	        	<Col sm={8}>
-	            <Switch>
-	              { routes.map(({path, component: Component}) => (
-	              	<Route path={path} key={path} component={Component}/>
-	              ))}
-	              <Redirect exact from="/" to={routes[0].path}/>
-	            </Switch>
-	          </Col>
-          </div>
-        // for small screens, only display nav at path="/"
-        : <Switch>
-			      <Route exact path="/" render={()=> <Col xs={12}><PortfolioNav routes={routes}/></Col>}/>
-            { routes.map(({path, component: Component}) => (
-            	<Route path={path} key={path} render={() => <Col xs={12}><Component/></Col>}/>
-            ))}
-          </Switch>
-      }
-    </Media>
+    <Col xs={12} sm={3}>
+      <Route path="/" render={()=> (
+        // displays PortfolioNav as horizontal card if screen is small
+        <Media query="(max-width: 768px)">
+          { screenIsSmall => screenIsSmall
+            ? <PortfolioNav routes={routes} horizontal/>
+            : <PortfolioNav routes={routes}/> 
+          }
+        </Media>
+      )}/>
+    </Col>
+  	<Col xs={12} sm={9}>
+      <Switch>
+        { routes.map(({path, component: Component}) => (
+        	<Route path={path} key={path} component={Component}/>
+        ))}
+        <Redirect exact from="/" to={routes[0].path}/>
+      </Switch>
+    </Col>
 	</GridRow>
 );
 
