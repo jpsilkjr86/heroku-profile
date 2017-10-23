@@ -5,7 +5,7 @@ import styles from './HorizontalCard.css';
 
 const HorizontalCard = ({imgSrc, children}) => (
   <div className={styles["horizontal-card"]}>
-    {imgSrc && <img src={imgSrc} className={styles["left-img"]}/>}
+    <img src={imgSrc} className={styles["left-img"]}/>
     <div className={styles.content}>
     	{children}
     </div>
