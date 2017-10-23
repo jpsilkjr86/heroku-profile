@@ -4,7 +4,7 @@ import React from 'react';
 import { Panel } from 'react-bootstrap';
 
 // import custom components
-import AboutMe from './AboutMe'
+import AboutMe from './AboutMe';
 
 const Featured = props => <Panel>Featured</Panel>;
 const MyWorks = props => <Panel>MyWorks</Panel>;
