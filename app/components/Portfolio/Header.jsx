@@ -25,9 +25,9 @@ const Header = ({handleChangeTheme, themes}) => (
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullRight>
+        <LinkContainer to="/featured"><NavItem eventKey={1}>Featured</NavItem></LinkContainer>
+        <LinkContainer to="/about"><NavItem eventKey={2}>About Me</NavItem></LinkContainer>
         <ExternalLink href={resumeLink}>Resume</ExternalLink>
-        <LinkContainer to="/about"><NavItem eventKey={1}>About Me</NavItem></LinkContainer>
-        <LinkContainer to="/games"><NavItem eventKey={2}>Games</NavItem></LinkContainer>
         <NavDropdown eventKey={3} title="Choose a Theme!" id="theme-dropdown">
           {themes.map((theme, i) =>
             <MenuItem
