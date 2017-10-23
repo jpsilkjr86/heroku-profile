@@ -6,42 +6,24 @@ import { Panel, Button, Accordion, ListGroup, ListGroupItem } from 'react-bootst
 import { LinkContainer } from 'react-router-bootstrap';
 import { Collapse } from 'reactstrap';
 
-class PortfolioNav extends Component {
-  state = { isOpen: false }
+import HorizontalCard from './PortfolioItems/cards/HorizontalCard';
 
-  toggle = () => {
-  	console.log('before', this.state);
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
-  }
+import imgSrc from './PortfolioItems/img/portfolio-portrait.jpg';
 
-  componentDidMount() {
-  	this.setState({isOpen: true});
-  }
-
-  componentWillUnmount() {
-  	this.setState({isOpen: false});
-  }
-
-  render() {
-
-  	const { routes } = this.props;
-
-    return (
-    	<Collapse isOpen={this.state.isOpen}>
-				<div className="text-center">
-					<ListGroup>
-						{/* create a set of links by iterating through props.routes */}
-						{ routes.map(({path, title}) => (
-			      	<LinkContainer to={path} key={path}>
-			      		<ListGroupItem>{title}</ListGroupItem>
-			      	</LinkContainer>
-			      ))}
-				  </ListGroup>
-			  </div>
-		  </Collapse>
-		);
-  }
-}
+const PortfolioNav = ({ routes }) => (
+	<HorizontalCard imgSrc={imgSrc}>
+		<div className="text-center">
+			<ListGroup>
+				{/* create a set of links by iterating through props.routes */}
+				{ routes.map(({path, title}) => (
+	      	<LinkContainer to={path} key={path}>
+	      		<ListGroupItem>{title}</ListGroupItem>
+	      	</LinkContainer>
+	      ))}
+		  </ListGroup>
+	  </div>
+  </HorizontalCard>
+);
 
 export default PortfolioNav;
 

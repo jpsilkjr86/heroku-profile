@@ -6,7 +6,7 @@ import { Grid, Row, Col, Panel, Button } from 'react-bootstrap';
 
 import Media from 'react-media';
 
-import PortfolioNav from './Main/PortfolioNav';
+import PortfolioNav from './PortfolioNav';
 
 const GridRow = ({children}) => <main><Grid><Row>{children}</Row></Grid></main>;
 
