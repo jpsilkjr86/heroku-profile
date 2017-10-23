@@ -9,6 +9,7 @@ import { Collapse } from 'reactstrap';
 const PortfolioNav = ({ routes }) => (
 	<div className="text-center">
 		<ListGroup>
+			{/* create a set of links by iterating through props.routes */}
 			{ routes.map(({path, title}) => (
       	<LinkContainer to={path} key={path}>
       		<ListGroupItem>{title}</ListGroupItem>

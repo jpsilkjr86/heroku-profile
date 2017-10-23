@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import Header from './Portfolio/Header';
 import Main from './Portfolio/Main';
 import Footer from './Portfolio/Footer';
+import AboutMe from './Portfolio/PortfolioItems/AboutMe';
 
 import { page } from './styles/page.css';
 
@@ -21,7 +22,6 @@ const themes = [
 const themeNames = themes.reduce((prev, current) => [...prev, current.name], []);
 
 const Featured = props => <Panel>Featured</Panel>;
-const AboutMe = props => <Panel>AboutMe</Panel>;
 const MyWorks = props => <Panel>MyWorks</Panel>;
 const Collaborations = props => <Panel>Collaborations</Panel>;
 const Games = props => <Panel>Games</Panel>;

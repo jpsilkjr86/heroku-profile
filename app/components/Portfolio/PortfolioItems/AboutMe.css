@@ -1,0 +1,11 @@
+.scrollable {
+	max-height: 400px;
+	overflow-y: scroll;
+}
+
+.portfolioImg {
+	width: 175px;
+	float: left;
+	margin: 0 10px 10px 0;
+	border-radius: 8px;
+}
