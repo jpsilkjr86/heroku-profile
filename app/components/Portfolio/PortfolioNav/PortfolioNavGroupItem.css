@@ -8,6 +8,11 @@
   display: block;
   cursor: pointer;
 }
+
+.item.right-content {
+	height: 16.67%;
+}
+
 a, a:focus, a:hover {
 	text-decoration: none;
 }

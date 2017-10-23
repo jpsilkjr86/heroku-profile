@@ -1,3 +1,15 @@
 .group {
 	text-align: center;
+
+	/* to ensure it fits full height and width of container*/
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	/*border: 2px solid red;*/
+
+	/*display: grid;
+	grid-template-rows: (6, 1fr);
+	grid-row-gap: 0px;
+	grid-auto-rows: minmax(auto, auto);*/
 }

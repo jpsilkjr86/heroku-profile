@@ -13,7 +13,7 @@ import PortfolioNavGroupItem from './PortfolioNav/PortfolioNavGroupItem';
 import imgSrc from './PortfolioItems/img/portfolio-portrait.jpg';
 
 const PortfolioNav = ({ routes, horizontal }) => {
-	
+	// WhichCard is determined by value of horizontal prop
   const WhichCard = horizontal ? HorizontalCard : Card;
 
   return (
@@ -23,7 +23,9 @@ const PortfolioNav = ({ routes, horizontal }) => {
   				{/* create a set of links by iterating through props.routes */}
   				{ routes.map(({path, title}) => (
   	      	<Link to={path} key={path}>
-  	      		<PortfolioNavGroupItem thisPath={path}>{title}</PortfolioNavGroupItem>
+  	      		<PortfolioNavGroupItem thisPath={path} horizontal={horizontal}>
+                {title}
+              </PortfolioNavGroupItem>
   	      	</Link>
   	      ))}
   		  </PortfolioNavGroup>

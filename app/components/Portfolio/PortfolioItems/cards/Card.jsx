@@ -6,7 +6,7 @@ import styles from './Card.css';
 const Card = ({imgSrc, children}) => (
   <div className={styles.card}>
     {imgSrc && <img src={imgSrc} width="100%"/>}
-    <div>
+    <div className={styles.content}>
     	{children}
     </div>
   </div>
