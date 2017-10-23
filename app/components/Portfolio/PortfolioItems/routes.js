@@ -7,12 +7,14 @@ import { Panel } from 'react-bootstrap';
 import AboutMe from './AboutMe';
 import Card from './cards/Card';
 import HorizontalCard from './cards/HorizontalCard';
+import ImgCollapseCard from './cards/ImgCollapseCard';
 
-import imgSrc from './img/portfolio-portrait.jpg';
+import profile from './img/portfolio-portrait.jpg';
+import youqueue from './img/youqueue.jpg';
 
 const Featured = props => <Card>Featured</Card>;
-const MyWorks = props => <HorizontalCard imgSrc={imgSrc}>MyWorks</HorizontalCard>;
-const Collaborations = props => <Card>Collaborations</Card>;
+const MyWorks = props => <HorizontalCard imgSrc={profile}>MyWorks</HorizontalCard>;
+const Collaborations = props => <ImgCollapseCard imgSrc={youqueue}>Collaborations</ImgCollapseCard>;
 const Games = props => <Card>Games</Card>;
 const ExternalLinks = props => <Card>ExternalLinks</Card>;
 
