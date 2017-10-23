@@ -6,15 +6,14 @@ import { Panel, Button, Accordion, ListGroup, ListGroupItem } from 'react-bootst
 import { LinkContainer } from 'react-router-bootstrap';
 import { Collapse } from 'reactstrap';
 
-const PortfolioNav = props => (
+const PortfolioNav = ({ routes }) => (
 	<div className="text-center">
 		<ListGroup>
-	    <LinkContainer to="/featured"><ListGroupItem>Featured Works</ListGroupItem></LinkContainer>
-	    <LinkContainer to="/about"><ListGroupItem>About Me</ListGroupItem></LinkContainer>
-	    <LinkContainer to="/myworks"><ListGroupItem>My Works</ListGroupItem></LinkContainer>
-	    <LinkContainer to="/collaborations"><ListGroupItem>Collaborations</ListGroupItem></LinkContainer>
-	    <LinkContainer to="/games"><ListGroupItem>Games</ListGroupItem></LinkContainer>
-	    <LinkContainer to="/links"><ListGroupItem>External Links</ListGroupItem></LinkContainer>
+			{ routes.map(({path, title}) => (
+      	<LinkContainer to={path} key={path}>
+      		<ListGroupItem>{title}</ListGroupItem>
+      	</LinkContainer>
+      ))}
 	  </ListGroup>
   </div>
 );

@@ -8,20 +8,34 @@ import Footer from './Portfolio/Footer';
 
 import { page } from './styles/page.css';
 
-// saves themes array as single source of truth about css for this component
-const themes = [{
-	name: 'Kaohsiung',
-	fileName: 'kaohsiung.css'
-},{
-	name: 'Taipei',
-	fileName: 'taipei.css'
-},{
-	name: 'Metro',
-	fileName: 'metro.css'
-}];
+import { Panel } from 'react-bootstrap';
 
-// generates themeNames by reducing the names out of themes array. [] is initialValue
+// saves themes array as single source of truth about css for this component
+const themes = [
+	{ name: 'Kaohsiung', fileName: 'kaohsiung.css' },
+	{ name: 'Taipei', fileName: 'taipei.css' },
+	{ name: 'Metro', fileName: 'metro.css' }
+];
+
+// themeNames is an array of .name values from themes. [] is initialValue of reduce.
 const themeNames = themes.reduce((prev, current) => [...prev, current.name], []);
+
+const Featured = props => <Panel>Featured</Panel>;
+const AboutMe = props => <Panel>AboutMe</Panel>;
+const MyWorks = props => <Panel>MyWorks</Panel>;
+const Collaborations = props => <Panel>Collaborations</Panel>;
+const Games = props => <Panel>Games</Panel>;
+const ExternalLinks = props => <Panel>ExternalLinks</Panel>;
+
+// saves routes array
+const routes = [
+	{ path: '/featured', component: Featured, title: 'Featured Works' },
+	{ path: '/about', component: AboutMe, title: 'About Me' },
+	{ path: '/myworks', component: MyWorks, title: 'My Works' },
+	{ path: '/collaborations', component: Collaborations, title: 'Collaborations' },
+	{ path: '/games', component: Games, title: 'Games' },
+	{ path: '/links', component: ExternalLinks, title: 'External Links' }
+];
 
 // declares PageTheme wrapper
 const PageTheme = ({theme, children}) => (
@@ -60,9 +74,9 @@ class Portfolio extends Component {
 		console.log('Portfolio renders');
 		return (
 			<PageTheme theme={this.state.theme}>
-				<Header key="header" handleChangeTheme={this.handleChangeTheme} themes={themeNames}/>,
-				<Main key="main"/>,
-				<Footer key="footer"/>
+				<Header handleChangeTheme={this.handleChangeTheme} themes={themeNames}/>,
+				<Main routes={routes}/>,
+				<Footer/>
 			</PageTheme>
 		);
 	}
