@@ -8,7 +8,7 @@ import Footer from './Portfolio/Footer';
 
 import routes from './Portfolio/PortfolioItems/routes';
 
-import { page } from './styles/page.css';
+import { page } from './page_styles/page.css';
 
 
 // saves themes array as single source of truth about css for this component
@@ -37,7 +37,7 @@ class Portfolio extends Component {
 		// index refers to index of themes array above
 		themeIndex: 0,
 		// default imported theme is index 0 of themes array
-		theme: require(`./styles/${themes[0].fileName}`)
+		theme: require(`./page_styles/${themes[0].fileName}`)
 	}
 
 	handleChangeTheme = selectedIndex => {
@@ -48,7 +48,7 @@ class Portfolio extends Component {
 			selectedIndex !== prevState.themeIndex && {
 				themeIndex: selectedIndex,
 				// imports selected css theme according to selectedIndex
-				theme: require(`./styles/${themes[selectedIndex].fileName}`)
+				theme: require(`./page_styles/${themes[selectedIndex].fileName}`)
 			})
 		);
 	}
