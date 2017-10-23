@@ -5,12 +5,16 @@ import { Panel } from 'react-bootstrap';
 
 // import custom components
 import AboutMe from './AboutMe';
+import Card from './cards/Card';
+import HorizontalCard from './cards/HorizontalCard';
 
-const Featured = props => <Panel>Featured</Panel>;
-const MyWorks = props => <Panel>MyWorks</Panel>;
-const Collaborations = props => <Panel>Collaborations</Panel>;
-const Games = props => <Panel>Games</Panel>;
-const ExternalLinks = props => <Panel>ExternalLinks</Panel>;
+import imgSrc from './img/portfolio-portrait.jpg';
+
+const Featured = props => <Card>Featured</Card>;
+const MyWorks = props => <HorizontalCard imgSrc={imgSrc}>MyWorks</HorizontalCard>;
+const Collaborations = props => <Card>Collaborations</Card>;
+const Games = props => <Card>Games</Card>;
+const ExternalLinks = props => <Card>ExternalLinks</Card>;
 
 // saves routes array
 const routes = [

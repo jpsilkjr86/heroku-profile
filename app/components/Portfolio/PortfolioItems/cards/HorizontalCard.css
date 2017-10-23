@@ -1,0 +1,17 @@
+.horizontal-card {
+	composes: card from './Card.css';
+	display: flex;
+	/*border-radius: 4px;*/
+}
+
+.left-img {
+	width: 35%;
+	height: 100%;
+	/*border-radius: 4px 0 0 4px;*/
+}
+
+.content {
+	display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
