@@ -1,0 +1,29 @@
+.item {
+	color: #555;
+	background-color: #bbb;
+	border: 1px solid #aaa;
+	font-size: .8em;
+	padding: 5px 0;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+a, a:focus, a:hover {
+	text-decoration: none;
+}
+
+.item:focus {
+	background-color: #31738f !important;
+	border-color: #31738f !important;
+	color: #fff !important;
+}
+.item:hover {
+	background-color: #31738f !important;
+	border-color: #31738f !important;
+	color: #fff !important;
+}
+.item.active {
+	color: #fff;
+	background-color: #31738f;
+	border-color: #31738f;
+}

@@ -2,25 +2,26 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
-import { Panel, Button, Accordion, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Collapse } from 'reactstrap';
 
 import HorizontalCard from './PortfolioItems/cards/HorizontalCard';
+import PortfolioNavGroup from './PortfolioNav/PortfolioNavGroup';
+import PortfolioNavGroupItem from './PortfolioNav/PortfolioNavGroupItem';
 
 import imgSrc from './PortfolioItems/img/portfolio-portrait.jpg';
 
 const PortfolioNav = ({ routes }) => (
 	<HorizontalCard imgSrc={imgSrc}>
 		<div className="text-center">
-			<ListGroup>
+			<PortfolioNavGroup>
 				{/* create a set of links by iterating through props.routes */}
 				{ routes.map(({path, title}) => (
-	      	<LinkContainer to={path} key={path}>
-	      		<ListGroupItem>{title}</ListGroupItem>
-	      	</LinkContainer>
+	      	<Link to={path} key={path}>
+	      		<PortfolioNavGroupItem thisPath={path}>{title}</PortfolioNavGroupItem>
+	      	</Link>
 	      ))}
-		  </ListGroup>
+		  </PortfolioNavGroup>
 	  </div>
   </HorizontalCard>
 );

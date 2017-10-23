@@ -13,27 +13,3 @@
 	background-color: #bbb;
 	border-color: #aaa;
 }
-/*:global(.list-group) {
-	margin-bottom: 0 !important;
-};*/
-:global(.list-group-item) {
-	background-color: #bbb;
-	border: 1px solid #aaa;
-	font-size: .8em;
-	padding: 5px 0;
-	border-radius: 0 !important;
-}
-:global(.list-group-item:focus) {
-	background-color: #31738f !important;
-	border-color: #31738f !important;
-	color: #fff !important;
-}
-:global(.list-group-item:hover) {
-	background-color: #31738f !important;
-	border-color: #31738f !important;
-	color: #fff !important;
-}
-:global(.list-group-item.active) {
-	background-color: #31738f;
-	border-color: #31738f;
-}
