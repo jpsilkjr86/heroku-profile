@@ -17,18 +17,8 @@ a, a:focus, a:hover {
 	text-decoration: none;
 }
 
-.item:focus {
-	background-color: #31738f !important;
-	border-color: #31738f !important;
-	color: #fff !important;
-}
-.item:hover {
-	background-color: #31738f !important;
-	border-color: #31738f !important;
-	color: #fff !important;
-}
-.item.active {
-	color: #fff;
+.item:focus, .item:hover, .item.active {
 	background-color: #31738f;
 	border-color: #31738f;
+	color: #fff;
 }
