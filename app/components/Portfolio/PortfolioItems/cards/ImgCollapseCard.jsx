@@ -33,7 +33,6 @@ class ImgCollapseCard extends Component {
 		    </Collapse>
 		    <Collapse isOpen={!isOpen}>
 			    <div className={styles.content} onClick={this.toggle}>
-			    	<h4>{title}</h4>
 			    	{description}
 			    </div>
 		    </Collapse>

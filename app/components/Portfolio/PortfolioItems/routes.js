@@ -1,5 +1,5 @@
 // imports project components
-import {  Featured, AboutMe, MyWorks, Collaborations, Games, ExternalLinks } from './projects';
+import {  Featured, AboutMe, MyWorks, Collaborations, Games, ExternalLinks } from './portfolio-items';
 
 // saves routes array
 const routes = [

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { Grid, Row, Col, Panel, Button } from 'react-bootstrap';
+import { Grid, Row, Col, Clearfix } from 'react-bootstrap';
 
 import Media from 'react-media';
 
@@ -23,6 +23,7 @@ const Main = ({ routes }) => (
         </Media>
       )}/>
     </Col>
+    <Clearfix visibleXsBlock/>
   	<Col xs={12} sm={9}>
       <Switch>
         { routes.map(({path, component: Component}) => (
