@@ -1,6 +1,8 @@
 // imports react component classes
 import React, { Component } from 'react';
 
+import { Col } from 'react-bootstrap';
+
 import { Collapse } from 'reactstrap';
 
 import Card from './Card.jsx';
@@ -9,7 +11,7 @@ import styles from './ImgCollapseCard.css';
 
 class ImgCollapseCard extends Component {
 	state = {
-		isOpen: false
+		isOpen: true
 	}
 
 	toggle = () => {
@@ -19,17 +21,20 @@ class ImgCollapseCard extends Component {
 
 	render() {
 			
-		const { imgSrc, children } = this.props;
+		const { imgSrc, link, subtext, children } = this.props;
 		const { isOpen } = this.state;
 
 		return (
 		  <div className={styles["img-collapse-card"]}>
-		    <img src={imgSrc} className={styles["img"]} onClick={this.toggle}/>
-		    <Collapse isOpen={isOpen}>
-			    <div className={styles.content}>
+		  	<Collapse isOpen={isOpen}>
+			    <img src={imgSrc} className={styles["img"]} onClick={this.toggle}/>
+		    </Collapse>
+		    <Collapse isOpen={!isOpen}>
+			    <div className={styles.content} onClick={this.toggle}>
 			    	{children}
 			    </div>
 		    </Collapse>
+		    <div className={styles.subtext}>{subtext}</div>
 		  </div>
 		);
 	}
