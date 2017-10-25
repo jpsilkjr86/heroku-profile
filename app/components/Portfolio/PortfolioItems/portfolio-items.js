@@ -108,4 +108,6 @@ const Games = props => <Card>Games</Card>;
 
 const ExternalLinks = props => <Card>ExternalLinks</Card>;
 
-module.exports = { Featured, AboutMe, MyWorks, Collaborations, Games, ExternalLinks };
+const projectItems = { Featured, AboutMe, MyWorks, Collaborations, Games, ExternalLinks };
+
+module.exports = projectItems;

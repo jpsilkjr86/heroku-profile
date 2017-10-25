@@ -63,4 +63,5 @@ const NYTReact = () => (
 	/>
 );
 
-module.exports = { YouQueueReact, YouQueueLite, MovieBuffHub, ArticleSaver, NYTReact };
+const projects = { YouQueueReact, YouQueueLite, MovieBuffHub, ArticleSaver, NYTReact };
+module.exports = projects;
