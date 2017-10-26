@@ -15,7 +15,7 @@ const Main = ({ routes }) => (
     <Col xs={12} sm={3}>
       <Route path="/" render={()=> (
         // displays PortfolioNav as horizontal card if screen is small
-        <Media query="(max-width: 768px)">
+        <Media query="(max-width: 767px)">
           { screenIsSmall => screenIsSmall
             ? <PortfolioNav routes={routes} horizontal/>
             : <PortfolioNav routes={routes}/> 

@@ -18,11 +18,13 @@ const PortfolioNav = ({ routes, horizontal }) => {
   return (
     <div className={styles.wrapper}>
       <WhichCard imgSrc={imgSrc}>
-    		<div className="text-center">
+    		<div className={styles.content}>
     			<PortfolioNavGroup>
     				{/* create a set of links by iterating through props.routes */}
     				{ routes.map(({path, title}) => (
     	      	<Link to={path} key={path}>
+                {/* thisPath prop passed for determing "active" link CSS */}
+                {/* horizontal value passed too as this will presentation of PortfolioNavGroupItem */}
     	      		<PortfolioNavGroupItem thisPath={path} horizontal={horizontal}>
                   {title}
                 </PortfolioNavGroupItem>

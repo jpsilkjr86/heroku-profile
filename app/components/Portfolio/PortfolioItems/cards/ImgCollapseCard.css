@@ -5,20 +5,6 @@
 	/*border: 2px solid red;*/
 }
 
-@media screen and (max-width: 768px) {
-	.wrapper {
-		/*height: 250px;*/
-		width: 300px;
-	}
-}
-
-@media screen and (max-width: 640px) {
-	.wrapper {
-		/*height: 215px;*/
-		width: 270px;
-	}
-}
-
 .img-collapse-card {
 	composes: card from './Card.css';
 	max-width: 300px;
@@ -52,3 +38,17 @@
  .btn-img {
  	width: 22px;
  }
+
+@media screen and (max-width: 767px) {
+	.wrapper {
+		/*height: 250px;*/
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.wrapper {
+		/*height: 215px;*/
+		width: 270px;
+	}
+}

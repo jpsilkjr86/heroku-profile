@@ -22,3 +22,10 @@ a, a:focus, a:hover {
 	border-color: #31738f;
 	color: #fff;
 }
+
+@media screen and (max-width: 320px) {
+	.item {
+		padding: 2px;
+		font-size: .7em;
+	}
+}
