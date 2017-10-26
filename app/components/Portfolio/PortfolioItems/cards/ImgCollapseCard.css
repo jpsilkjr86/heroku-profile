@@ -1,12 +1,26 @@
 .wrapper {
 	height: 180px;
+	width: 212px;
+	margin: auto;
 	/*border: 2px solid red;*/
+}
+
+@media screen and (max-width: 768px) {
+	.wrapper {
+		/*height: 250px;*/
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.wrapper {
+		/*height: 215px;*/
+		width: 270px;
+	}
 }
 
 .img-collapse-card {
 	composes: card from './Card.css';
-	/*border-radius: 4px;*/
-	/*max-height: 250px;*/
 	max-width: 300px;
 	margin-left: auto;
 	margin-right: auto;
@@ -22,10 +36,6 @@
 }
 
 .content {
-	/*display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  position: relative;*/
 	height: 100px;
 	background-color: #eee;
 	padding: 20px;
