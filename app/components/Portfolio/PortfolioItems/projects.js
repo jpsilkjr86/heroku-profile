@@ -63,5 +63,38 @@ const NYTReact = () => (
 	/>
 );
 
-const projects = { YouQueueReact, YouQueueLite, MovieBuffHub, ArticleSaver, NYTReact };
+const Hangman = () => (
+	<ImgCollapseCard
+		imgSrc={hangman}
+		githubLink={'https://github.com/jpsilkjr86/Hangman-App'}
+		deployedLink={'https://jpsilkjr86.github.io/Hangman-App/'}
+		title={'Hangman'}
+		description={<p>Front-end game I made when I was first learning vanilla JavaScript. Have fun!</p>}
+	/>
+);
+
+const Trivia = () => (
+	<ImgCollapseCard
+		imgSrc={trivia}
+		githubLink={'https://github.com/jpsilkjr86/TriviaGame'}
+		deployedLink={'https://jpsilkjr86.github.io/TriviaGame/'}
+		title={'Trivia!'}
+		description={<p>Front-end game I made when I was first learning jQuery and how to define objects using constructors. See how many answers you can get right!</p>}
+	/>
+);
+
+const RPSMultiplayer = () => (
+	<ImgCollapseCard
+		imgSrc={rpsmultiplayer}
+		githubLink={'https://github.com/jpsilkjr86/RPS-Multiplayer'}
+		deployedLink={'https://jpsilkjr86.github.io/RPS-Multiplayer/'}
+		title={'Rock, Paper, Scissors - Multiplayer!'}
+		description={<p>Front-end game I made when I was first learning Google's Firebase API. Chat function is enabled, and you can even watch others play as an observer!</p>}
+	/>
+);
+
+const projects = { 
+	YouQueueReact, YouQueueLite, MovieBuffHub, ArticleSaver, NYTReact, Hangman, Trivia, RPSMultiplayer
+};
+
 module.exports = projects;
