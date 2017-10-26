@@ -27,28 +27,30 @@ class ImgCollapseCard extends Component {
 		const { isOpen } = this.state;
 
 		return (
-		  <div className={styles["img-collapse-card"]}>
-		  	<Collapse isOpen={isOpen}>
-			    <img src={imgSrc} className={styles["img"]} onClick={this.toggle}/>
-		    </Collapse>
-		    <Collapse isOpen={!isOpen}>
-			    <div className={styles.content} onClick={this.toggle}>
-			    	{description}
+			<div className={styles.wrapper}>
+			  <div className={styles["img-collapse-card"]}>
+			  	<Collapse isOpen={isOpen}>
+				    <img src={imgSrc} className={styles.img} onClick={this.toggle}/>
+			    </Collapse>
+			    <Collapse isOpen={!isOpen}>
+				    <div className={styles.content} onClick={this.toggle}>
+				    	{description}
+				    </div>
+			    </Collapse>
+			    <div className={styles.subtext}>
+		    	  <ButtonGroup justified>
+					    <Button href="#" bsStyle="default" onClick={this.toggle}>
+					    	<Glyphicon glyph="plus"/>
+					    </Button>
+					    <Button href={githubLink} bsStyle="default" target="_blank">
+					    	<img src={githubIcon} className={styles["btn-img"]}/>
+					    </Button>
+					    <Button href={deployedLink} bsStyle="default" target="_blank">
+					    	<Glyphicon glyph="link"/>
+					    </Button>
+					  </ButtonGroup>
 			    </div>
-		    </Collapse>
-		    <div className={styles.subtext}>
-	    	  <ButtonGroup justified>
-				    <Button href="#" bsStyle="default" onClick={this.toggle}>
-				    	<Glyphicon glyph="plus"/>
-				    </Button>
-				    <Button href={githubLink} bsStyle="default" target="_blank">
-				    	<img src={githubIcon} className={styles["btn-img"]}/>
-				    </Button>
-				    <Button href={deployedLink} bsStyle="default" target="_blank">
-				    	<Glyphicon glyph="link"/>
-				    </Button>
-				  </ButtonGroup>
-		    </div>
+			  </div>
 		  </div>
 		);
 	}

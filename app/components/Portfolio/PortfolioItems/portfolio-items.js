@@ -24,7 +24,7 @@ const PortfolioItem = ({ projectList }) => (
 		{ // iterates through projectList and wraps them in columns
 			projectList
 				.map((Project, i) => (
-					<Col xs={8} sm={6} md={4} key={i}>
+					<Col xs={12} sm={6} md={4} key={i}>
 						<Project/>
 					</Col>
 				)) // then takes array of columns and adds Sm and Md clearfixes in proper places
