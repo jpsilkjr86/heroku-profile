@@ -30,7 +30,12 @@ class ImgCollapseCard extends Component {
 			<div className={styles.wrapper}>
 			  <div className={styles["img-collapse-card"]}>
 			  	<Collapse isOpen={isOpen}>
-				    <img src={imgSrc} className={styles.img} onClick={this.toggle}/>
+			  		<div className={styles["img-div"]} onClick={this.toggle}>
+					    <img src={imgSrc} className={styles.img}/>
+					    <div className={styles["title-wrapper"]}>
+					    	<h4 className={styles.title}>{title}</h4>
+					    </div>
+				    </div>
 			    </Collapse>
 			    <Collapse isOpen={!isOpen}>
 				    <div className={styles.content} onClick={this.toggle}>
@@ -57,57 +62,3 @@ class ImgCollapseCard extends Component {
 }
 
 export default ImgCollapseCard;
-/*
-<Row>
-		    		<Col xs={4}>
-				    	<Button href="#" bsStyle="default"><Glyphicon glyph="plus"/></Button>
-			    	</Col>
-		    		<Col xs={4}>
-				    	<Button href="#" bsStyle="default"><img src={github} className={styles["btn-img"]}/></Button>
-			    	</Col>
-		    		<Col xs={4}>
-				    	<Button href="#" bsStyle="default"><Glyphicon glyph="link"/></Button>
-			    	</Col>
-			    </Row>
-
-<ButtonGroup justified>
-				    <Button href="#" bsStyle="success"><Glyphicon glyph="plus"/></Button>
-				    <Button href="#" bsStyle="success"><img src={github} className={styles["btn-img"]}/></Button>
-				    <Button href="#" bsStyle="success"><Glyphicon glyph="link"/></Button>
-				  </ButtonGroup>
-<Row>
-		    		<Col xs={4}>
-				    	<Dropdown id="links">
-					      <Dropdown.Toggle bsStyle="success">
-					        <Glyphicon glyph="link" />
-					      </Dropdown.Toggle>
-					      <Dropdown.Menu>
-					        <MenuItem eventKey="1">GitHub Repo</MenuItem>
-					        <MenuItem eventKey="2">Deployed App</MenuItem>
-					      </Dropdown.Menu>
-					    </Dropdown>
-			    	</Col>
-		    		<Col xs={4}>
-				    	<Dropdown id="links">
-					      <Dropdown.Toggle bsStyle="success">
-					        <Glyphicon glyph="link" />
-					      </Dropdown.Toggle>
-					      <Dropdown.Menu>
-					        <MenuItem eventKey="1">GitHub Repo</MenuItem>
-					        <MenuItem eventKey="2">Deployed App</MenuItem>
-					      </Dropdown.Menu>
-					    </Dropdown>
-			    	</Col>
-		    		<Col xs={4}>
-				    	<Dropdown id="links">
-					      <Dropdown.Toggle bsStyle="success">
-					        <Glyphicon glyph="link" />
-					      </Dropdown.Toggle>
-					      <Dropdown.Menu>
-					        <MenuItem eventKey="1">GitHub Repo</MenuItem>
-					        <MenuItem eventKey="2">Deployed App</MenuItem>
-					      </Dropdown.Menu>
-					    </Dropdown>
-			    	</Col>
-			    </Row>
-			    */

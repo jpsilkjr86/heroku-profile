@@ -10,15 +10,31 @@
 	max-width: 300px;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
 }
 
 .img {
 	width: 100%;
 	height: 105px;
+	position: relative;
 }
 
-.img:hover, .content:hover {
+.img-div:hover, .content:hover {
 	cursor: pointer;
+}
+
+.title-wrapper {
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	width: 100%;
+}
+.title {
+	text-align: center;
+	color: white;
+	padding: 5px;
+	text-shadow: 2px 2px 2px #000,
+							0 0 2px #000;
 }
 
 .content {
