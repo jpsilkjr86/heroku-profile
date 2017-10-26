@@ -51,7 +51,7 @@ const Featured = () => (
 const MyWorks = () => (
 	<PortfolioItem
 		projectList={[
-			YouQueueReact, ArticleSaver, MovieBuffHub, NYTReact, YouQueueLite, Hangman, Trivia, RPSMultiplayer
+			YouQueueReact, ArticleSaver, MovieBuffHub, NYTReact, YouQueueLite, RPSMultiplayer, Hangman, Trivia
 		]}
 	/>
 );

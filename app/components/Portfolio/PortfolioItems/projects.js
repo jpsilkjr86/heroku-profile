@@ -29,7 +29,7 @@ const YouQueueLite = () => (
 		githubLink={'https://github.com/jpsilkjr86/you-queue'}
 		deployedLink={'https://intense-journey-46722.herokuapp.com/'}
 		title={'You-Queue (Lite)'}
-		description={<p>Earlier version of You-Queue before the React migration, using Sequelize ORM and Handlebars templating engine run on Node/Express.</p>}
+		description={<p>Earlier version of You-Queue, using Sequelize ORM and Handlebars templating engine run on Node/Express.</p>}
 	/>
 );
 
@@ -39,7 +39,7 @@ const MovieBuffHub = () => (
 		githubLink={'https://github.com/jpsilkjr86/Movie-Buff-Hub-Project'}
 		deployedLink={'https://jpsilkjr86.github.io/Movie-Buff-Hub-Project/'}
 		title={'Movie Buff Hub'}
-		description={<p>Front-end app that displays movie information according to user searches by querying movie database APIs. Uses Materialize CSS framework, Firebase (NoSQL), Event-Driven Programming (through jQuery and Firebase event callbacks)</p>}
+		description={<p>Front-end app that queries APIs and displays movie information. Uses Materialize.css, Firebase and jQuery.</p>}
 	/>
 );
 
@@ -48,8 +48,8 @@ const ArticleSaver = () => (
 		imgSrc={articleSaver}
 		githubLink={'https://github.com/jpsilkjr86/article-saver'}
 		deployedLink={'https://immense-lake-69616.herokuapp.com/'}
-		title={'Article Saver'}
-		description={<p>Full-stack Node/Express app using Mongoose ODM for managing MongoDB database and Passport.js for user authentication.</p>}
+		title={'Article Scraper-Saver'}
+		description={<p>Full-stack app that allows users to scrape news articles, save them and comment on them. MongoDB / Passport.js</p>}
 	/>
 );
 
@@ -57,7 +57,7 @@ const NYTReact = () => (
 	<ImgCollapseCard
 		imgSrc={nytreact}
 		githubLink={'https://github.com/jpsilkjr86/nyt-react'}
-		deployedLink={'https://github.com/jpsilkjr86/nyt-react'}
+		deployedLink={'https://vast-hamlet-74186.herokuapp.com/'}
 		title={'NYTimes Search (React!)'}
 		description={<p>Full-stack MERN app that allows users to search articles on the New York Times API and save articles for later viewing.</p>}
 	/>
@@ -69,7 +69,7 @@ const Hangman = () => (
 		githubLink={'https://github.com/jpsilkjr86/Hangman-App'}
 		deployedLink={'https://jpsilkjr86.github.io/Hangman-App/'}
 		title={'Hangman'}
-		description={<p>Front-end game I made when I was first learning vanilla JavaScript. Have fun!</p>}
+		description={<p>Front-end game I made when I was first learning vanilla JavaScript. Check it out and have fun with it!</p>}
 	/>
 );
 
@@ -79,7 +79,7 @@ const Trivia = () => (
 		githubLink={'https://github.com/jpsilkjr86/TriviaGame'}
 		deployedLink={'https://jpsilkjr86.github.io/TriviaGame/'}
 		title={'Trivia!'}
-		description={<p>Front-end game I made when I was first learning jQuery and how to define objects using constructors. See how many answers you can get right!</p>}
+		description={<p>Front-end game I made when I was first learning jQuery. See how many you can get right!</p>}
 	/>
 );
 
@@ -89,7 +89,7 @@ const RPSMultiplayer = () => (
 		githubLink={'https://github.com/jpsilkjr86/RPS-Multiplayer'}
 		deployedLink={'https://jpsilkjr86.github.io/RPS-Multiplayer/'}
 		title={'Rock, Paper, Scissors - Multiplayer!'}
-		description={<p>Front-end game I made when I was first learning Google's Firebase API. Chat function is enabled, and you can even watch others play as an observer!</p>}
+		description={<p>Front-end game I made when I was first learning Google's Firebase API. Players can also chat with each other!</p>}
 	/>
 );
 
