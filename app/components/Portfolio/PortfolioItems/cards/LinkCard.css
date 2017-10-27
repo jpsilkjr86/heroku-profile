@@ -1,0 +1,40 @@
+.link-card {
+	composes: card from './Card.css';
+	display: flex;
+	width: 200px;
+	margin: 20px auto;
+	position: relative;
+}
+
+.img {
+	width: 50%;
+	height: 100%;
+}
+
+.right {
+	display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  width: 70%;
+  /*margin: auto;*/
+  top: 15%;
+  right: 15%;
+  height: 70%;
+}
+
+@media screen and (max-width: 767px) {
+	.link-card {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.link-card {
+		width: 270px;
+	}
+}

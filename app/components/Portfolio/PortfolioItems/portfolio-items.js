@@ -5,6 +5,8 @@ import { Row, Col, Clearfix } from 'react-bootstrap';
 
 // imports custom components
 import AboutMe from './AboutMe';
+import { Resume, LinkedIn, GitHub } from './link-items';
+
 import Card from './cards/Card';
 import ImgCollapseCard from './cards/ImgCollapseCard';
 
@@ -68,7 +70,13 @@ const Games = () => (
 	/>
 );
 
-const ExternalLinks = props => <Card>ExternalLinks</Card>;
+const ExternalLinks = () => (
+	<PortfolioItem
+		projectList={[Resume, LinkedIn, GitHub]}
+	/>
+);
+
+// const ExternalLinks = props => <Card>ExternalLinks</Card>;
 
 const projectItems = { Featured, AboutMe, MyWorks, Collaborations, Games, ExternalLinks };
 
