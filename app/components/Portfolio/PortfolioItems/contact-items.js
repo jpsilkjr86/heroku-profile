@@ -14,7 +14,7 @@ const Resume = () => (
   <LinkCard
     screenshot={resumeSquare}
     icon={googledoc}
-    href={'https://docs.google.com/document/d/1bn5rhGN1l2Hli8Ix3WOvoFqV3xSklmLDtQoadtWE26g/edit?usp=sharing'}
+    href={'https://docs.google.com/document/d/1bn5rhGN1l2Hli8Ix3WOvoFqV3xSklmLDtQoadtWE26g'}
     title={'Resume'}
   />
 );
