@@ -1,0 +1,17 @@
+.info-card {
+	composes: card from './Card.css';
+}
+
+.content-wrapper {
+	padding: 10px 20px;
+}
+
+.hr {
+	border-color: #999;
+}
+
+.header {
+	/*text-align: center;*/
+	text-align: left;
+	padding-left: 8%;
+}
