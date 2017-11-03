@@ -10,8 +10,6 @@ import linkedinIcon from './img/linkedin_icon.png';
 import githubScreenshot from './img/github-screenshot.jpg';
 import githubIcon from './img/github_icon.png';
 
-// import styles from './linkItems.css';
-
 const Resume = () => (
   <LinkCard
     screenshot={resumeSquare}
@@ -39,6 +37,6 @@ const GitHub = () => (
   />
 );
 
-const linkItems = { Resume, LinkedIn, GitHub };
+const contactItems = { Resume, LinkedIn, GitHub };
 
-module.exports = linkItems;
+module.exports = contactItems;

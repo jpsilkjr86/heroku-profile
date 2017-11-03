@@ -1,5 +1,5 @@
 // imports project components
-import {  Featured, AboutMe, MyWorks, Collaborations, Games, ExternalLinks } from './portfolio-items';
+import {  Featured, AboutMe, MyWorks, Collaborations, Games, Contact } from './portfolio-items';
 
 // saves routes array
 const routes = [
@@ -8,7 +8,7 @@ const routes = [
 	{ path: '/myworks', component: MyWorks, title: 'My Works' },
 	{ path: '/collaborations', component: Collaborations, title: 'Collaborations' },
 	{ path: '/games', component: Games, title: 'Games' },
-	{ path: '/links', component: ExternalLinks, title: 'External Links' }
+	{ path: '/contact', component: Contact, title: 'Contact' }
 ];
 
 module.exports = routes;
