@@ -3,7 +3,8 @@ const express = require('express'),
 	bodyParser = require('body-parser'),
   logger = require('morgan'),
   mongoose = require('mongoose'),
-  fs = require('fs');
+  fs = require('fs'),
+  path = require('path');
 
 // sets up express app
 const app = express();
@@ -88,7 +89,8 @@ db.once('open', function() {
 		// require('./controllers/api-routes.js')(app);
     // default html route is to redirect the index page
     app.get('*', (req, res) => {
-      res.redirect('/');
+      // res.redirect('/');
+      res.sendFile(path.join(__dirname + '/public/index.html'));
     });
 	});
 });
