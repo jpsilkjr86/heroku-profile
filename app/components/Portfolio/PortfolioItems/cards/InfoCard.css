@@ -8,10 +8,47 @@
 
 hr {
 	border-color: #999;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
-.header {
+.header-div {
+	width: 100%;
+	overflow: auto;
+	/*border: 2px solid orange;*/
+}
+
+.header-text {
 	/*text-align: center;*/
 	text-align: left;
 	padding-left: 8%;
+	float: left;
+	/*border: 1px solid blue;*/
+}
+
+.header-icon {
+	float: right;
+	margin: 5px 8px;
+	height: 100%;
+}
+
+.header-icon img {
+	width: 50px;
+	height: 50px;
+	/*border: 1px solid red;*/
+}
+
+
+@media screen and (max-width: 480px) {
+	.header-icon {
+		margin: 7.5px 5px;
+	}
+	.header-icon img {
+		width: 35px;
+		height: 35px;
+	}
+	.header-text {
+		font-size: 1.4em;
+		padding-left: 3%;
+	}
 }
