@@ -38,6 +38,10 @@ hr {
 	/*border: 1px solid red;*/
 }
 
+.header-icon>a>img:hover, .header-icon>a>img:active, .header-icon>a>img:focus {
+	opacity: .7;
+	transition: .5s;
+}
 
 @media screen and (max-width: 480px) {
 	.header-icon {

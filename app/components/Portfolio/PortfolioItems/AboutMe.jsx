@@ -3,8 +3,10 @@ import React from 'react';
 
 import InfoCard from './cards/InfoCard';
 
+import { ResumeIcon, LinkedInIcon, GitHubIcon } from './contact-items';
+
 const AboutMe = props => (
-  <InfoCard header="John Silkey - Bio">
+  <InfoCard header="John Silkey - Bio" linkIcons={[GitHubIcon, LinkedInIcon, ResumeIcon]}>
   	<h4>Before Web Development</h4>
     <p>
     	Before becoming a full-stack web developer and teaching assistant for a coding bootcamp,

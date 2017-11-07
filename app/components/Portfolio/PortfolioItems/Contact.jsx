@@ -10,7 +10,7 @@ const githubLink = 'https://github.com/jpsilkjr86';
 import { ResumeIcon, LinkedInIcon, GitHubIcon } from './contact-items';
 
 const Contact = props => (
-  <InfoCard header="Contact Me" linkIcons={[ResumeIcon, LinkedInIcon, GitHubIcon]}>
+  <InfoCard header="Contact Me" linkIcons={[GitHubIcon, LinkedInIcon, ResumeIcon]}>
   	<p>
   		Email: <a href="mailto:jpsilkjr86@gmail.com">jpsilkjr86@gmail.com</a>
   		<br/>
