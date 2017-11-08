@@ -8,7 +8,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js",
+    "dev-build": "webpack --config webpack.dev.js",
+    "dev": "set NODE_ENV=development&& node server.js",
     "heroku-postbuild": "webpack --config webpack.prod.js",
     "start": "node server.js"
   },
