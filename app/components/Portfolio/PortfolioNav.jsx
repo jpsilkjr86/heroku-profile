@@ -7,8 +7,8 @@ import HorizontalCard from './PortfolioItems/cards/HorizontalCard';
 import PortfolioNavGroup from './PortfolioNav/PortfolioNavGroup';
 import PortfolioNavGroupItem from './PortfolioNav/PortfolioNavGroupItem';
 
-// import imgSrc from './PortfolioItems/img/portfolio-portrait.jpg';
-import imgSrc from './PortfolioItems/img/placeholder.jpg';
+import imgSrc from './PortfolioItems/img/portfolio-portrait.jpg';
+// import imgSrc from './PortfolioItems/img/placeholder.jpg';
 
 import styles from './PortfolioNav.css';
 

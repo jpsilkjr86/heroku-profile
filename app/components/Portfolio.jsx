@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 // children components
 import Header from './Portfolio/Header';
 import Main from './Portfolio/Main';
-import Footer from './Portfolio/Footer';
 
 import routes from './Portfolio/PortfolioItems/routes';
 
@@ -58,9 +57,8 @@ class Portfolio extends Component {
 		console.log('Portfolio renders');
 		return (
 			<PageTheme theme={this.state.theme}>
-				<Header handleChangeTheme={this.handleChangeTheme} themes={themeNames}/>,
-				<Main routes={routes}/>,
-				<Footer/>
+				<Header handleChangeTheme={this.handleChangeTheme} themes={themeNames}/>
+				<Main routes={routes}/>
 			</PageTheme>
 		);
 	}
