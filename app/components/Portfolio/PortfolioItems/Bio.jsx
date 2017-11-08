@@ -5,7 +5,7 @@ import InfoCard from './cards/InfoCard';
 
 import { ResumeIcon, LinkedInIcon, GitHubIcon } from './contact-items';
 
-const AboutMe = props => (
+const Bio = props => (
   <InfoCard header="John Silkey - Bio" linkIcons={[GitHubIcon, LinkedInIcon, ResumeIcon]}>
   	<h4>Before Web Development</h4>
     <p>
@@ -60,4 +60,4 @@ const AboutMe = props => (
   </InfoCard>
 );
 
-export default AboutMe;
+export default Bio;

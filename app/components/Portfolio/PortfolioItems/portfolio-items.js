@@ -4,7 +4,7 @@ import React from 'react';
 import { Row, Col, Clearfix } from 'react-bootstrap';
 
 // imports custom components
-import AboutMe from './AboutMe';
+import Bio from './Bio';
 import Contact from './Contact';
 import { Resume, LinkedIn, GitHub } from './contact-items';
 
@@ -71,12 +71,6 @@ const Games = () => (
 	/>
 );
 
-// const Contact = () => (
-// 	<PortfolioItem
-// 		projectList={[Resume, LinkedIn, GitHub]}
-// 	/>
-// );
-
-const portfolioItems = { Featured, AboutMe, MyWorks, Collaborations, Games, Contact };
+const portfolioItems = { Featured, Bio, MyWorks, Collaborations, Games, Contact };
 
 module.exports = portfolioItems;
