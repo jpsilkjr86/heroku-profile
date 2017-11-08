@@ -45,7 +45,7 @@ app.use(express.static('public'));
 
 // ============ Webpack Middleware Configurations (Development Only - "npm run dev") ============
 // first checks to make sure NODE_ENV is in development mode
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV === 'development') {
   console.log('NODE_ENV is in development mode.'
   	+ '\nConfiguring webpack-dev-middleware and webpack-hot-middleware...');
 
@@ -84,12 +84,8 @@ db.once('open', function() {
 	// listens to port for running server within mongoose connection callback
 	app.listen(port, () => {
 		console.log('App listening on port ' + port);
-		// sets up routes
-  //   require('./controllers/auth-routes.js')(app, passport);
-		// require('./controllers/api-routes.js')(app);
-    // default html route is to redirect the index page
+    // catch-all get route to ensure SPA works correctly (with react-router)
     app.get('*', (req, res) => {
-      // res.redirect('/');
       res.sendFile(path.join(__dirname + '/public/index.html'));
     });
 	});
