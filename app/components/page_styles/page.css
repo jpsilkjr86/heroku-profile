@@ -3,13 +3,9 @@
 	min-height: 100vh;
 	flex-direction: column;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
-}
-:global(.panel) {
-	background-color: #ccc;
-}
-:global(.panel-default>.panel-heading) {
-	background-color: #bbb;
-	border-color: #aaa;
+
+  /* need this line for bkg img to stay fixed with scrolling */
+  overflow-y: auto;
 }
