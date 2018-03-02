@@ -9,7 +9,7 @@ const Bio = props => (
   <InfoCard header="John Silkey - Bio" linkIcons={[GitHubIcon, LinkedInIcon, ResumeIcon]}>
   	<h4>Before Web Development</h4>
     <p>
-    	Before becoming a full-stack web developer and teaching assistant for a coding bootcamp,
+    	Before becoming a full-stack developer and teaching assistant for a coding bootcamp,
     	I spent most of my adult life overseas! After graduating from ASU in 2009 with Bachelor's
     	degrees in Chinese and Japanese, I moved to China and spent one year teaching English as
     	a second language while honing my language skills in Mandarin. Upon finishing my contract,
@@ -32,30 +32,19 @@ const Bio = props => (
     </p>
     <h4>Life as a Developer</h4>
     <p>
-    	Since beginning my career as a developer, hardly a day goes by when I am not either coding,
-    	reading about new programming patterns and practices, or starting a new project -- a fact
-    	which my <a href="https://github.com/jpsilkjr86">GitHub</a> profile's activity can corraborate.
-    	I love programming in JavaScript and feel invigorated whenever I encounter a problem that needs
-    	to be solved. Although I initially found myself more comfortable in a back-end development environment,
-    	all that changed when I began building web applications using React. The architectural
-    	patterns which combine the declarative nature of XML with the power of functional JavaScript
-    	opened my eyes to the seemingly boundless possibilities of front-end development. I
-    	have built several full-stack React applications (including this portfolio), and will
-    	continue to build more in my free time and in my career.
+    	I now work full-time as a junior software developer for an e-commerce company, coding in Laravel's
+        MVC framework (PHP) as well as some projects that use React/Redux for the front-end (ES6).
+        It is invigorating for me to be in such an environment where I can not only apply the
+        experience I gained from the bootcamp but also learn new technologies and design patterns as well,
+        particularly in SOLID OOP. I built, tested and deployed my first full-stack project within the first three
+        weeks of employment, which included building a MySQL database, coding routing and controller logic on the
+        back-end, and designing Blade views with jQuery and Bootstrap for the front-end. The software
+        component I developed enables our administrative staff to publish products on third-party marketplaces,
+        automating what was once a tedious, repetitive process! I enjoyed every minute of it, and will continue
+        to eagerly pursue challenges that help expand my mind and my skillset.
     </p>
     <p>
-    	It is my dream to become a full-stack web developer, but I also recognize that this may
-    	take some time to realize. I believe I would thrive in either a back-end or front-end
-    	development role, and am excited to work full-time for a company that is looking for diligent,
-    	committed and friendly developers to join their team. I am an excellent communicator thanks
-    	to many years working as an educator, and my passion for improving any environment I am in
-    	as well as my professional organizational skills has made me into a competent, efficient
-    	project manager as well.
-    </p>
-    <p>
-    	Thank you for visiting my portfolio, and please don't hesitate to reach out to me any
-    	time with questions or if you would like to schedule an interview. Have a fantastic
-    	rest of your day!
+    	Thank you for visiting my portfolio, and please don't hesitate to reach out!
     </p>
   </InfoCard>
 );
